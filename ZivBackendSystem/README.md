@@ -5,8 +5,7 @@ Businesses everywhere are looking to extend their operations as a digital platfo
 deeper engagement with existing ones. 
 API Management provides the core competencies to ensure a successful API program through developer engagement, business insights, analytics, security and protection.
 
-[![Alt text for your video](http://img.youtube.com/vi/X8Kfn39P7KQ/0.jpg)](http://www.youtube.com/watch?v=X8Kfn39P7KQ)
-[![Alt text for your video](http://img.youtube.com/vi/UM1y0yy7n1M/0.jpg)](http://www.youtube.com/watch?v=UM1y0yy7n1M)
+[![Alt text for your video](http://img.youtube.com/vi/X8Kfn39P7KQ/0.jpg)](http://www.youtube.com/watch?v=X8Kfn39P7KQ) [![Alt text for your video](http://img.youtube.com/vi/UM1y0yy7n1M/0.jpg)](http://www.youtube.com/watch?v=UM1y0yy7n1M)
 
 
 ![alt tag](https://raw.githubusercontent.com/zivshtaeinberg/APIMZone/master/ArcFile.PNG)
