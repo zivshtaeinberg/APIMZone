@@ -1,17 +1,21 @@
-"# APIMZone" 
+# APIMZone
 
-Currently Azure Virtual Machine Scale Sets (VMSS) doesn't support custom logic based [auto scaling](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/insights-advanced-autoscale-virtual-machine-scale-sets).
+API Management helps organizations publish APIs to external, partner and internal developers to unlock the potential of their data and services. 
+Businesses everywhere are looking to extend their operations as a digital platform, creating new channels, finding new customers and driving 
+deeper engagement with existing ones. 
+API Management provides the core competencies to ensure a successful API program through developer engagement, business insights, analytics, security and protection.
 
-This solution was developed for real customer need,
-It based on Azure Function App which triggered by timer and samples ServiceBus or SQL Database stored procedure to get current load on VMSS,
-Azure Function then adds or removes VMs accordingly to configured threshold.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/goIrkRzvQ3k" frameborder="0" allowfullscreen></iframe>
 
-Please select the samples product: ServiceBus or SQL Database in the concole application project or in the Azure Function project.
-
-
-There's also console app for testing locally.
 
 ![alt tag](https://raw.githubusercontent.com/zivshtaeinberg/APIMZone/master/ArcFile.PNG)
+
+## APIs and operations
+APIs are the foundation of an API Management service instance. 
+Each API represents a set of operations available to developers. 
+Each API contains a reference to the back-end service that implements the API, and its operations map to the operations implemented by the back-end service. 
+Operations in API Management are highly configurable, with control over URL mapping, query and path parameters, request and response content, and operation response caching. 
+Rate limit, quotas, and IP restriction policies can also be implemented at the API or individual operation level.
 
 ## Requirements
 * Azure Function App
