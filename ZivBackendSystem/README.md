@@ -23,7 +23,8 @@ restriction policies can also be implemented at the API or individual operation 
 
 
 ## Requirements
-* [APIM] (https://azure.microsoft.com/en-us/services/api-management/)
+* Azure Account & Subscription
+* [APIM] (https://azure.microsoft.com/en-us/services/api-management/) bla bla
 * [AAD] (https://docs.microsoft.com/en-us/azure/active-directory/)
 * [AAD B2C] (https://azure.microsoft.com/en-us/services/active-directory-b2c/)
 * [Webapp] (https://azure.microsoft.com/en-us/services/app-service/web/)
