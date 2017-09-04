@@ -8,11 +8,10 @@ Azure Function then adds or removes VMs accordingly to configured threshold.
 
 Please select the samples product: ServiceBus or SQL Database in the concole application project or in the Azure Function project.
 
-You can clone this repo and create your own custom logic, just create a new class library and implement [ILoadWatcher](https://github.com/guybartal/AzureVmssCustomAutoScale/blob/master/vmssAutoScale.Interfaces/ILoadWatcher.cs) interface.
 
 There's also console app for testing locally.
 
-![alt tag](https://raw.githubusercontent.com/zivshtaeinberg/AzureVmssCustomAutoScale/master/ArcFile.PNG)
+![alt tag](https://raw.githubusercontent.com/zivshtaeinberg/APIMZone/master/ArcFile.PNG)
 
 ## Requirements
 * Azure Function App
