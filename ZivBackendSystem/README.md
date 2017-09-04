@@ -1,25 +1,37 @@
 # APIMZone
 
+## API Management 
 API Management helps organizations publish APIs to external, partner and internal developers to unlock the potential of their data and services. 
 Businesses everywhere are looking to extend their operations as a digital platform, creating new channels, finding new customers and driving 
 deeper engagement with existing ones. 
 API Management provides the core competencies to ensure a successful API program through developer engagement, business insights, analytics, security and protection.
 
-[![Alt text for your video](http://img.youtube.com/vi/X8Kfn39P7KQ/0.jpg)](http://www.youtube.com/watch?v=X8Kfn39P7KQ) [![Alt text for your video](http://img.youtube.com/vi/UM1y0yy7n1M/0.jpg)](http://www.youtube.com/watch?v=UM1y0yy7n1M)
-
-
-![alt tag](https://raw.githubusercontent.com/zivshtaeinberg/APIMZone/master/ArcFile.PNG)
+[![Alt text for your video](http://img.youtube.com/vi/X8Kfn39P7KQ/0.jpg)](http://www.youtube.com/watch?v=X8Kfn39P7KQ) 
+[![Alt text for your video](http://img.youtube.com/vi/UM1y0yy7n1M/0.jpg)](http://www.youtube.com/watch?v=UM1y0yy7n1M)
 
 ## APIs and operations
 APIs are the foundation of an API Management service instance. 
 Each API represents a set of operations available to developers. 
 Each API contains a reference to the back-end service that implements the API, and its operations map to the operations implemented by the back-end service. 
 Operations in API Management are highly configurable, with control over URL mapping, query and path parameters, request and response content, and operation response caching. 
-Rate limit, quotas, and IP restriction policies can also be implemented at the API or individual operation level.
+Rate limit, quotas, and IP 
+
+restriction policies can also be implemented at the API or individual operation level.
+
+## APIM Zone System Architecture
+![alt tag](https://raw.githubusercontent.com/zivshtaeinberg/APIMZone/master/ArcFile.PNG)
+
 
 ## Requirements
-* Azure Function App
-* VMSS
+* [APIM] (https://azure.microsoft.com/en-us/services/api-management/)
+* [AAD] (https://docs.microsoft.com/en-us/azure/active-directory/)
+* [AAD B2C] (https://azure.microsoft.com/en-us/services/active-directory-b2c/)
+* [Webapp] (https://azure.microsoft.com/en-us/services/app-service/web/)
+* [Blob Storage] (https://azure.microsoft.com/en-us/services/storage/blobs/)
+* [SQL Database] (https://azure.microsoft.com/en-us/services/sql-database/?v=16.50)
+* [Event Hub] (https://azure.microsoft.com/en-us/services/event-hubs/)
+* [Stream Analytics] (https://azure.microsoft.com/en-us/services/stream-analytics/)
+* [Power BI] (https://powerbi.microsoft.com/en-us/)
 * [Register](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-app-registration) a new application in Azure Active Directory (need to be global admin in order to do that)
 * Create application Key, save this secret, you will need that later for deployment
 * Give the application "Owner" role on VMSS
