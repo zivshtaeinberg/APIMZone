@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZivAPIMGameSystem_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CategoryTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CategoryName" Type="text" />
+    <Property Name="Description" Type="text" />
+  </EntityType>
+  <EntityType Name="QuestionResultsLogsTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="text" />
+    <Property Name="UserFirstName" Type="text" />
+    <Property Name="UserLastName" Type="text" />
+    <Property Name="UserEmailAddress" Type="text" />
+    <Property Name="TimeStamp" Type="text" />
+    <Property Name="QuestionID" Type="int" />
+    <Property Name="QuestionUserAnswer" Type="text" />
+    <Property Name="QuestionAnswerPassOrFail" Type="text" />
+    <Property Name="QuestionAnswerScore" Type="int" />
+    <Property Name="TestNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="QuestionTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Question" Type="text" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="ImageLocation" Type="text" />
+    <Property Name="QuestionLevel" Type="int" />
+    <Property Name="QuestionPoints" Type="int" />
+  </EntityType>
+  <EntityType Name="TestTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TestID" Type="int" />
+    <Property Name="TestName" Type="text" />
+    <Property Name="TestDescription" Type="text" />
+    <Property Name="TestStatus" Type="int" />
+    <Property Name="TestTimeStampStart" Type="text" />
+    <Property Name="TestTimeStampEnd" Type="text" />
+  </EntityType>
+  <EntityType Name="UserDetailsTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TimeStamp" Type="text" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="UserFirstName" Type="text" />
+    <Property Name="UserLastName" Type="text" />
+    <Property Name="UserEmailAddress" Type="text" />
+    <Property Name="UserImageLocation" Type="text" />
+  </EntityType>
+  <EntityContainer Name="ZivAPIMGameSystem_dbModelStoreContainer">
+    <EntitySet Name="CategoryTable" EntityType="Self.CategoryTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuestionResultsLogsTable" EntityType="Self.QuestionResultsLogsTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuestionTable" EntityType="Self.QuestionTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestTable" EntityType="Self.TestTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDetailsTable" EntityType="Self.UserDetailsTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

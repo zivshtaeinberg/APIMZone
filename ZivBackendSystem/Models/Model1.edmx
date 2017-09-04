@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ZivAPIMGameSystem_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APIMLogTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="DATETIME" Type="nvarchar" MaxLength="50" />
+          <Property Name="ServiceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestId" Type="nvarchar" MaxLength="50" />
+          <Property Name="IpAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="OperationName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" />
+          <Property Name="Url" Type="nvarchar(max)" />
+          <Property Name="UserEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeploymentRegion" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestBody" Type="nvarchar(max)" />
+          <Property Name="PartitionId" Type="nvarchar" MaxLength="50" />
+          <Property Name="EventEnqueuedUtcTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="EventProcessedUtcTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CategoryTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CategoryName" Type="text" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="QuestionResultsLogsTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="text" />
+          <Property Name="UserFirstName" Type="text" />
+          <Property Name="UserLastName" Type="text" />
+          <Property Name="UserEmailAddress" Type="text" />
+          <Property Name="TimeStamp" Type="text" />
+          <Property Name="QuestionID" Type="int" />
+          <Property Name="QuestionUserAnswer" Type="text" />
+          <Property Name="QuestionAnswerPassOrFail" Type="text" />
+          <Property Name="QuestionAnswerScore" Type="int" />
+          <Property Name="TestNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="QuestionTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Question" Type="text" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="ImageLocation" Type="text" />
+          <Property Name="QuestionLevel" Type="int" />
+          <Property Name="QuestionPoints" Type="int" />
+        </EntityType>
+        <EntityType Name="TestTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="TestID" Type="int" />
+          <Property Name="TestName" Type="text" />
+          <Property Name="TestDescription" Type="text" />
+          <Property Name="TestStatus" Type="int" />
+          <Property Name="TestTimeStampStart" Type="text" />
+          <Property Name="TestTimeStampEnd" Type="text" />
+        </EntityType>
+        <EntityType Name="UserDetailsTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="UserFirstName" Type="text" />
+          <Property Name="UserLastName" Type="text" />
+          <Property Name="UserEmailAddress" Type="text" />
+          <Property Name="UserImageLocation" Type="text" />
+        </EntityType>
+        <EntityContainer Name="ZivAPIMGameSystem_dbModelStoreContainer">
+          <EntitySet Name="APIMLogTable" EntityType="Self.APIMLogTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoryTable" EntityType="Self.CategoryTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuestionResultsLogsTable" EntityType="Self.QuestionResultsLogsTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuestionTable" EntityType="Self.QuestionTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestTable" EntityType="Self.TestTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserDetailsTable" EntityType="Self.UserDetailsTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZivAPIMGameSystem_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="APIMLogTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="DATETIME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ServiceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RequestId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OperationName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Method" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeploymentRegion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RequestBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartitionId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EventEnqueuedUtcTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EventProcessedUtcTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="CategoryTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="QuestionResultsLogsTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserEmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TimeStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionID" Type="Int32" />
+          <Property Name="QuestionUserAnswer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionAnswerPassOrFail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionAnswerScore" Type="Int32" />
+          <Property Name="TestNumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="QuestionTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="ImageLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QuestionLevel" Type="Int32" />
+          <Property Name="QuestionPoints" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TestTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="TestID" Type="Int32" />
+          <Property Name="TestName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TestDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TestStatus" Type="Int32" />
+          <Property Name="TestTimeStampStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TestTimeStampEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserDetailsTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="UserFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserEmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserImageLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="ZivAPIMGameSystem_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="APIMLogTable" EntityType="Self.APIMLogTable" />
+          <EntitySet Name="CategoryTable" EntityType="Self.CategoryTable" />
+          <EntitySet Name="QuestionResultsLogsTable" EntityType="Self.QuestionResultsLogsTable" />
+          <EntitySet Name="QuestionTable" EntityType="Self.QuestionTable" />
+          <EntitySet Name="TestTable" EntityType="Self.TestTable" />
+          <EntitySet Name="UserDetailsTable" EntityType="Self.UserDetailsTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZivAPIMGameSystem_dbModelStoreContainer" CdmEntityContainer="ZivAPIMGameSystem_dbEntities">
+          <EntitySetMapping Name="APIMLogTable">
+            <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.APIMLogTable">
+              <MappingFragment StoreEntitySet="APIMLogTable">
+                <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="OperationName" ColumnName="OperationName" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="DeploymentRegion" ColumnName="DeploymentRegion" />
+                <ScalarProperty Name="RequestBody" ColumnName="RequestBody" />
+                <ScalarProperty Name="PartitionId" ColumnName="PartitionId" />
+                <ScalarProperty Name="EventEnqueuedUtcTime" ColumnName="EventEnqueuedUtcTime" />
+                <ScalarProperty Name="EventProcessedUtcTime" ColumnName="EventProcessedUtcTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoryTable">
+            <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.CategoryTable">
+              <MappingFragment StoreEntitySet="CategoryTable">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuestionResultsLogsTable">
+            <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.QuestionResultsLogsTable">
+              <MappingFragment StoreEntitySet="QuestionResultsLogsTable">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+                <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+                <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+                <ScalarProperty Name="QuestionUserAnswer" ColumnName="QuestionUserAnswer" />
+                <ScalarProperty Name="QuestionAnswerPassOrFail" ColumnName="QuestionAnswerPassOrFail" />
+                <ScalarProperty Name="QuestionAnswerScore" ColumnName="QuestionAnswerScore" />
+                <ScalarProperty Name="TestNumber" ColumnName="TestNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuestionTable">
+            <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.QuestionTable">
+              <MappingFragment StoreEntitySet="QuestionTable">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="ImageLocation" ColumnName="ImageLocation" />
+                <ScalarProperty Name="QuestionLevel" ColumnName="QuestionLevel" />
+                <ScalarProperty Name="QuestionPoints" ColumnName="QuestionPoints" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestTable">
+            <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.TestTable">
+              <MappingFragment StoreEntitySet="TestTable">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TestID" ColumnName="TestID" />
+                <ScalarProperty Name="TestName" ColumnName="TestName" />
+                <ScalarProperty Name="TestDescription" ColumnName="TestDescription" />
+                <ScalarProperty Name="TestStatus" ColumnName="TestStatus" />
+                <ScalarProperty Name="TestTimeStampStart" ColumnName="TestTimeStampStart" />
+                <ScalarProperty Name="TestTimeStampEnd" ColumnName="TestTimeStampEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDetailsTable">
+            <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.UserDetailsTable">
+              <MappingFragment StoreEntitySet="UserDetailsTable">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+                <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+                <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
+                <ScalarProperty Name="UserImageLocation" ColumnName="UserImageLocation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZivAPIMGameSystem_dbModelStoreContainer" CdmEntityContainer="ZivAPIMGameSystem_dbEntities">
+    <EntitySetMapping Name="APIMLogTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.APIMLogTable">
+        <MappingFragment StoreEntitySet="APIMLogTable">
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="OperationName" ColumnName="OperationName" />
+          <ScalarProperty Name="Method" ColumnName="Method" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="DeploymentRegion" ColumnName="DeploymentRegion" />
+          <ScalarProperty Name="RequestBody" ColumnName="RequestBody" />
+          <ScalarProperty Name="PartitionId" ColumnName="PartitionId" />
+          <ScalarProperty Name="EventEnqueuedUtcTime" ColumnName="EventEnqueuedUtcTime" />
+          <ScalarProperty Name="EventProcessedUtcTime" ColumnName="EventProcessedUtcTime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.CategoryTable">
+        <MappingFragment StoreEntitySet="CategoryTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionResultsLogsTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.QuestionResultsLogsTable">
+        <MappingFragment StoreEntitySet="QuestionResultsLogsTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="QuestionUserAnswer" ColumnName="QuestionUserAnswer" />
+          <ScalarProperty Name="QuestionAnswerPassOrFail" ColumnName="QuestionAnswerPassOrFail" />
+          <ScalarProperty Name="QuestionAnswerScore" ColumnName="QuestionAnswerScore" />
+          <ScalarProperty Name="TestNumber" ColumnName="TestNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.QuestionTable">
+        <MappingFragment StoreEntitySet="QuestionTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ImageLocation" ColumnName="ImageLocation" />
+          <ScalarProperty Name="QuestionLevel" ColumnName="QuestionLevel" />
+          <ScalarProperty Name="QuestionPoints" ColumnName="QuestionPoints" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.TestTable">
+        <MappingFragment StoreEntitySet="TestTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="TestName" ColumnName="TestName" />
+          <ScalarProperty Name="TestDescription" ColumnName="TestDescription" />
+          <ScalarProperty Name="TestStatus" ColumnName="TestStatus" />
+          <ScalarProperty Name="TestTimeStampStart" ColumnName="TestTimeStampStart" />
+          <ScalarProperty Name="TestTimeStampEnd" ColumnName="TestTimeStampEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDetailsTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.UserDetailsTable">
+        <MappingFragment StoreEntitySet="UserDetailsTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
+          <ScalarProperty Name="UserImageLocation" ColumnName="UserImageLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZivAPIMGameSystem_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CategoryTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="QuestionResultsLogsTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserEmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TimeStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionID" Type="Int32" />
+    <Property Name="QuestionUserAnswer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionAnswerPassOrFail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionAnswerScore" Type="Int32" />
+    <Property Name="TestNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="QuestionTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="ImageLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="QuestionLevel" Type="Int32" />
+    <Property Name="QuestionPoints" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TestTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="TestID" Type="Int32" />
+    <Property Name="TestName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TestDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TestStatus" Type="Int32" />
+    <Property Name="TestTimeStampStart" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TestTimeStampEnd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserDetailsTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="UserFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserEmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserImageLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ZivAPIMGameSystem_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CategoryTable" EntityType="Self.CategoryTable" />
+    <EntitySet Name="QuestionResultsLogsTable" EntityType="Self.QuestionResultsLogsTable" />
+    <EntitySet Name="QuestionTable" EntityType="Self.QuestionTable" />
+    <EntitySet Name="TestTable" EntityType="Self.TestTable" />
+    <EntitySet Name="UserDetailsTable" EntityType="Self.UserDetailsTable" />
+  </EntityContainer>
+</Schema>

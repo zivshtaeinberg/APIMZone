@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZivAPIMGameSystem_dbModelStoreContainer" CdmEntityContainer="ZivAPIMGameSystem_dbEntities">
+    <EntitySetMapping Name="CategoryTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.CategoryTable">
+        <MappingFragment StoreEntitySet="CategoryTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionResultsLogsTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.QuestionResultsLogsTable">
+        <MappingFragment StoreEntitySet="QuestionResultsLogsTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="QuestionUserAnswer" ColumnName="QuestionUserAnswer" />
+          <ScalarProperty Name="QuestionAnswerPassOrFail" ColumnName="QuestionAnswerPassOrFail" />
+          <ScalarProperty Name="QuestionAnswerScore" ColumnName="QuestionAnswerScore" />
+          <ScalarProperty Name="TestNumber" ColumnName="TestNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.QuestionTable">
+        <MappingFragment StoreEntitySet="QuestionTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ImageLocation" ColumnName="ImageLocation" />
+          <ScalarProperty Name="QuestionLevel" ColumnName="QuestionLevel" />
+          <ScalarProperty Name="QuestionPoints" ColumnName="QuestionPoints" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.TestTable">
+        <MappingFragment StoreEntitySet="TestTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="TestName" ColumnName="TestName" />
+          <ScalarProperty Name="TestDescription" ColumnName="TestDescription" />
+          <ScalarProperty Name="TestStatus" ColumnName="TestStatus" />
+          <ScalarProperty Name="TestTimeStampStart" ColumnName="TestTimeStampStart" />
+          <ScalarProperty Name="TestTimeStampEnd" ColumnName="TestTimeStampEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDetailsTable">
+      <EntityTypeMapping TypeName="ZivAPIMGameSystem_dbModel.UserDetailsTable">
+        <MappingFragment StoreEntitySet="UserDetailsTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserEmailAddress" ColumnName="UserEmailAddress" />
+          <ScalarProperty Name="UserImageLocation" ColumnName="UserImageLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

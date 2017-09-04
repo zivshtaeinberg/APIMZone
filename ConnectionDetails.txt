@@ -1,0 +1,5 @@
+Database:
+Server: zivapimgamedatabaseserver
+User Name: zistae
+Password: !QAZ2wsx
+Database Name: ZivAPIMGameSystem_db
