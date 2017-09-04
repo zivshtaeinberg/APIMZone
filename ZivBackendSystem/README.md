@@ -24,15 +24,15 @@ restriction policies can also be implemented at the API or individual operation 
 
 ## Requirements
 * Azure Account & Subscription
-* [APIM] (https://azure.microsoft.com/en-us/services/api-management/) bla bla
-* [AAD] (https://docs.microsoft.com/en-us/azure/active-directory/)
-* [AAD B2C] (https://azure.microsoft.com/en-us/services/active-directory-b2c/)
-* [Webapp] (https://azure.microsoft.com/en-us/services/app-service/web/)
-* [Blob Storage] (https://azure.microsoft.com/en-us/services/storage/blobs/)
-* [SQL Database] (https://azure.microsoft.com/en-us/services/sql-database/?v=16.50)
-* [Event Hub] (https://azure.microsoft.com/en-us/services/event-hubs/)
-* [Stream Analytics] (https://azure.microsoft.com/en-us/services/stream-analytics/)
-* [Power BI] (https://powerbi.microsoft.com/en-us/)
+* [APIM](https://azure.microsoft.com/en-us/services/api-management/)
+* [AAD](https://docs.microsoft.com/en-us/azure/active-directory/)
+* [AAD B2C](https://azure.microsoft.com/en-us/services/active-directory-b2c/)
+* [Webapp](https://azure.microsoft.com/en-us/services/app-service/web/)
+* [Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
+* [SQL Database](https://azure.microsoft.com/en-us/services/sql-database/?v=16.50)
+* [Event Hub](https://azure.microsoft.com/en-us/services/event-hubs/)
+* [Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/)
+* [Power BI](https://powerbi.microsoft.com/en-us/)
 * [Register](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-app-registration) a new application in Azure Active Directory (need to be global admin in order to do that)
 * Create application Key, save this secret, you will need that later for deployment
 * Give the application "Owner" role on VMSS
